@@ -4,7 +4,7 @@ class ShareValue < Crabfarm::BaseStruct
   has_string :fund
   has_string :serie
   has_string :date
-  has_float :value
+  has_string :value
 
   def print
     "#{institution}\t#{run}\t#{fund}\t#{serie}\t#{date}\t#{value.to_s}"

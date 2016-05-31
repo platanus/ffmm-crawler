@@ -11,7 +11,7 @@ class ValorCuotaDiariaReducer < Crabfarm::BaseReducer
       share_value.run = row_data[1].text
       share_value.fund = row_data[2].text
       share_value.serie = row_data[3].text
-      share_value.value = row_data[5].text.delete('.').sub(',','.').to_f
+      share_value.value = row_data[5].text.delete('.').sub(',','.')
       share_value.date = (params[:fecha] || Time.now.to_date).to_s
       share_values << share_value
     end
